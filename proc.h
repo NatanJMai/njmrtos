@@ -1,16 +1,23 @@
-/* Natan J. Mai
+/* natanjmai
  * 
  * This file contains the process' structures and functions.
- * */
+ */
+
+#include "defs.h"
 
 typedef struct {
-  int a;
-  int b;
-  int (*function)(void);
-
+  int id;
+  int(*function)(void);
+  unsigned int state;
 } proc;
 
+typedef struct {
+  int next_index;
+  proc *proc_list[MAX_PROCESS];
+} ptable;
+
+
 int f(){
-  printf("F\n");
+  printf("r\n");
 }
 
