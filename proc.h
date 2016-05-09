@@ -13,7 +13,7 @@ typedef struct {
 
 typedef struct {
   int next_index;
-  proc *proc_list[MAX_PROCESS];
+  proc proc_list[MAX_PROCESS];
 } ptable;
 
 
