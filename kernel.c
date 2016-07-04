@@ -6,6 +6,6 @@ int main(){
   init();
   run_test();
   print_processes();
-  
-  abort1("This is a test!");
+
+  //abort1("This is a test!");
 }

@@ -15,7 +15,6 @@ void pf7();
 
 void run_test(){
   create_processes_test();
-
 }
 
 void create_processes_test(){
@@ -26,8 +25,6 @@ void create_processes_test(){
   create_process(pf5);
   create_process(pf6);
   create_process(pf7);
-
-
 }
 
 void pf1(){
@@ -57,5 +54,3 @@ void pf6(){
 void pf7(){
   printf("\n7\n");
 }
-
-
