@@ -28,29 +28,29 @@ void create_processes_test(){
 }
 
 void pf1(){
-  printf("\n1\n");
+  printf("\nFunction Test 1\n");
 }
 
 void pf2(){
-  printf("\n2\n");
+  printf("\nFunction Test 2\n");
 }
 
 void pf3(){
-  printf("\n3\n");
+  printf("\nFunction Test 3\n");
 }
 
 void pf4(){
-  printf("\n4\n");
+  printf("\nFunction Test 4\n");
 }
 
 void pf5(){
-  printf("\n5\n");
+  printf("\nFunction Test 5\n");
 }
 
 void pf6(){
-  printf("\n6\n");
+  printf("\nFunction Test 6\n");
 }
 
 void pf7(){
-  printf("\n7\n");
+  printf("\nFunction Test 7\n");
 }

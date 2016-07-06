@@ -3,8 +3,6 @@
  * This file contains the process structures and functions.
  */
 
-#include "defs.h"
-
 typedef struct {
   int id;
   void(*function)(void);
@@ -18,23 +16,17 @@ typedef struct {
 } proc_table;
 
 static proc_table *ptable;
+static proc *p;
 
 void print_processes(){
   int q;
 
-  char *states[] = {
-    [READY]     "READY",
-    [BLOCKED]   "BLOCKED",
-    [RUNNING]   "RUNNING"
-  };
-
   printf("\n");
 
   for(q = 0; q < ptable->next_index; q++)
-    printf("ID STATE -> %d - %s\n", ptable->proc_list[q]->id, states[ptable->proc_list[q]->state]);
+    printf("ID - STATE -> %d - %s\n", ptable->proc_list[q]->id, states[ptable->proc_list[q]->state]);
 
-  printf("\n -------------------------- \n");
-
+  printf("\n-------------------------- \n");
 }
 
 void init(){
@@ -51,8 +43,6 @@ void insert_to_ptable(proc *p){
 }
 
 void create_process(void(*function)(void)){
-  proc *p;
-
   p = (proc *) malloc(sizeof(proc));
 
   p->function = function;
