@@ -21,11 +21,12 @@ static proc *p;
 void print_processes(){
   int q;
 
-  printf("\n");
+  if (ptable->next_index <= 0) abort1("Ptable does not have any process.");
+
+  printf("\nPRINT PROCESS\n");
 
   for(q = 0; q < ptable->next_index; q++)
     printf("ID - STATE -> %d - %s\n", ptable->proc_list[q]->id, states[ptable->proc_list[q]->state]);
-
   printf("\n-------------------------- \n");
 }
 
